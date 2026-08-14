@@ -2,7 +2,6 @@ package dev.ace.workshop.chat;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -12,14 +11,8 @@ public class ChatController {
 
     private final ChatClient chatClient;
 
-    /*
     public ChatController(ChatClient.Builder builder) {
         this.chatClient = builder.build();
-    }
-    */
-
-    public ChatController(@Qualifier("openAIChatClient") ChatClient chatClient) {
-        this.chatClient = chatClient;
     }
 
     @GetMapping("/chat")

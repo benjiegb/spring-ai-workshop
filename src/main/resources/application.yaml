@@ -2,21 +2,11 @@ spring:
   application:
     name: spring-ai-workshop
   ai:
-    chat:
-      client:
-        enabled: false
-    #OpenAI config
     openai:
       api-key: ${OPENAI_API_KEY}
       chat:
         options:
           model: gpt-4o
-    #Anthropic Claude config
-    anthropic:
-      api-key: ${ANTHROPIC_API_KEY}
-      chat:
-        options:
-          model: claude-sonnet-4-20250514
 
 
 #api:
